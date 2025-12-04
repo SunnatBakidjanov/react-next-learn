@@ -7,7 +7,7 @@ export const RacketSelectPage = () => {
 	const { title, description } = pageConfig;
 
 	return (
-		<div className="mt-10">
+		<div className="mt-6 md:mt-8 lg:mt-10">
 			<section>
 				<MaxWidthContainer>
 					<RacketGetting title={title} description={description} />
@@ -15,7 +15,7 @@ export const RacketSelectPage = () => {
 			</section>
 
 			<section>
-				<MaxWidthContainer>
+				<MaxWidthContainer className="px-4">
 					<RacketSelect />
 				</MaxWidthContainer>
 			</section>

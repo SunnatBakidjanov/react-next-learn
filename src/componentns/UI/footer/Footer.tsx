@@ -9,7 +9,7 @@ export const Footer = () => {
 	return (
 		<footer className="w-full bg-(--bg-accent) border-t border-black/40 mt-10">
 			<MaxWidthContainer>
-				<div className={cn('flex items-center justify-between', 'py-6')}>
+				<div className={cn('flex flex-col sm:flex-row items-center justify-between', 'py-6', 'gap-2')}>
 					<div className="text-sm text-gray-600 font-medium">
 						© {new Date().getFullYear()} {title}
 					</div>

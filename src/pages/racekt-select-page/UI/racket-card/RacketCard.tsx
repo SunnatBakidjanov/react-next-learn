@@ -14,23 +14,23 @@ export const RacketCard = ({ racket }: { racket: RacketType[number] }) => {
 		<div
 			className={cn(
 				'flex flex-col bg-(--bg-accent) rounded-xl shadow-black/60 shadow-md overflow-hidden',
-				'w-sm',
+				'w-full sm:w-2xs lg:w-sm',
 				'hover:shadow-xl focus-within:shadow-xl',
 				'transition-shadow duration-300 ease-out',
-				'p-4'
+				'px-3 py-6 sm:p-4'
 			)}
 		>
-			<div className={cn('flex items-center justify-center w-full', 'mb-4')}>
-				<div className="relative aspect-3/4 w-50 h-auto">
+			<div className={cn('flex items-center justify-center w-full', 'mb-4 md:mb-6')}>
+				<div className="relative aspect-3/4 h-auto w-40 sm:w-44 lg:w-50">
 					<Image src={imageUrl} alt={name} fill className="object-cover" sizes={'(max-width: 768px) 100vw'} loading="eager" />
 				</div>
 			</div>
 
 			<Line />
 
-			<div className="flex flex-col flex-1 mt-4">
+			<div className="flex flex-col justify-between flex-1 mt-4 text-center">
 				<h3 className="text-lg sm:text-xl font-bold text-(--primary-color)">{name}</h3>
-				<p className="text-(--accent-color) text-sm mt-1">
+				<p className="text-(--accent-color) mt-1">
 					{model} - {year}
 				</p>
 
