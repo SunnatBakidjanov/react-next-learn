@@ -1,9 +1,10 @@
-const RocketsPage = () => {
-	return (
-		<div>
-			<h1>Ракетки</h1>
-		</div>
-	);
+/* --- Imports --- */
+import { RacketSelectPage as RacketSelectComponent } from '@/pages/racket-page/RacketSelectPage';
+
+/* --- RocketsPage Component --- */
+const RacketSelectPage = () => {
+	return <RacketSelectComponent />;
 };
 
-export default RocketsPage;
+/* --- Exports --- */
+export default RacketSelectPage;
