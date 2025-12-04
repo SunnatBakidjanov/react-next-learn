@@ -1,9 +1,9 @@
 /* --- Imports --- */
-import { RacketSelectPage as RacketSelectComponent } from '@/pages/racket-page/RacketSelectPage';
+import { RacketSelectPage as Page } from '@/pages/racekt-select-page/RacketSelectPage';
 
 /* --- RocketsPage Component --- */
 const RacketSelectPage = () => {
-	return <RacketSelectComponent />;
+	return <Page />;
 };
 
 /* --- Exports --- */

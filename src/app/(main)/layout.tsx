@@ -1,9 +1,9 @@
 /* --- Imports --- */
-import { MainLayout as MainComponent } from '@/componentns/layouts/main-layout/MainLayout';
+import { MainLayout as Layout } from '@/componentns/layouts/main-layout/MainLayout';
 
 /* --- MainLayout Component --- */
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
-	return <MainComponent>{children}</MainComponent>;
+	return <Layout>{children}</Layout>;
 };
 
 /* --- Exports --- */
