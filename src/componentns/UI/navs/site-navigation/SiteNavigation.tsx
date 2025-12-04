@@ -27,9 +27,9 @@ export const SiteNavigation = ({ data, classNames }: Props) => {
 							<a
 								className={cn(
 									'font-bold',
-									'text-base sm:text-lg lg:text-xl',
 									'transition-colors duration-200 ease-out',
-									'hover:text-(--accent-color) focus-visible:text-(--accent-color)'
+									'hover:text-(--accent-color) focus-visible:text-(--accent-color)',
+									classNames?.link
 								)}
 								href={href}
 							>

@@ -1,11 +1,11 @@
+/* --- Imports --- */
+import { RootLayout as RootComponent } from '@/componentns/layouts/root-layout/RootLayout';
 import '@styles/globals.css';
 
+/* --- RootLayout --- */
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
-	return (
-		<html lang="ru">
-			<body>{children}</body>
-		</html>
-	);
+	return <RootComponent>{children}</RootComponent>;
 };
 
+/* --- Exports --- */
 export default RootLayout;
