@@ -1,6 +1,6 @@
-import { RacketType } from '@/mock/mock';
+import { RacketType } from '@/types/types';
 
-export const specsNav = (racket: RacketType[number]) => {
+export const specsNav = (racket: RacketType) => {
 	return [
 		{ name: 'Модель', value: racket?.model },
 		{ name: 'Год выпуска', value: racket?.year },

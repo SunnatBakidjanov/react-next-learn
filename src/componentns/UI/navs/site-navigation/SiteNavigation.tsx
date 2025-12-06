@@ -1,8 +1,6 @@
-'use client';
-
 /* --- Imports --- */
 import { cn } from '@/utils/cn';
-import { usePathname } from 'next/navigation';
+import { LinkComponent } from '../../link/Link';
 
 /* --- Types --- */
 type DataType = { text: string; href: string };
@@ -14,37 +12,15 @@ type Props = {
 
 /* --- SiteNavigation Component --- */
 export const SiteNavigation = ({ data, classNames }: Props) => {
-	const pathname = usePathname();
-
 	return (
 		<nav className={cn(classNames?.nav)}>
 			<ul className={cn('flex gap-2 sm:gap-3 lg:gap-4', classNames?.list)}>
 				{data.map(({ href, text }, i) => {
-					const isActive = pathname === href;
-
 					return (
-						<li className={cn('flex items-center justify-center relative group')} key={i}>
-							<a
-								className={cn(
-									'font-bold',
-									'transition-colors duration-200 ease-out',
-									'hover:text-(--accent-color) focus-visible:text-(--accent-color)',
-									classNames?.link
-								)}
-								href={href}
-							>
+						<li className={cn('flex items-center justify-center group')} key={i}>
+							<LinkComponent href={href} className={classNames?.link}>
 								{text}
-							</a>
-
-							{isActive && (
-								<span
-									className={cn(
-										'bg-(--primary-color) absolute w-full pointer-events-none h-0.5 bottom-0 ',
-										'transition-colors duration-200 ease-out',
-										'group-hover:bg-(--accent-color) group-focus-within:bg-(--accent-color)'
-									)}
-								/>
-							)}
+							</LinkComponent>
 						</li>
 					);
 				})}

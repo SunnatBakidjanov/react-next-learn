@@ -452,5 +452,3 @@ export const rackets = [
 		},
 	},
 ];
-
-export type RacketType = typeof rackets;

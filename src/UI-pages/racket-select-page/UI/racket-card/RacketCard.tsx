@@ -1,6 +1,6 @@
 /* --- Imports --- */
 import { Line } from '@/componentns/UI/line/Line';
-import type { RacketType } from '@/mock/mock';
+import type { RacketType } from '@/types/types';
 import { cn } from '@/utils/cn';
 import Image from 'next/image';
 import { pageConfig } from '../../page-config/page.config';
@@ -9,7 +9,7 @@ import { Title } from '@/componentns/UI/title/Title';
 import Link from 'next/link';
 
 /* --- RacketCard Component --- */
-export const RacketCard = ({ racket }: { racket: RacketType[number] }) => {
+export const RacketCard = ({ racket }: { racket: RacketType }) => {
 	const { cardBtn } = pageConfig;
 	const { id, name, imageUrl, model, year, price, description } = racket;
 
@@ -32,7 +32,9 @@ export const RacketCard = ({ racket }: { racket: RacketType[number] }) => {
 			<Line />
 
 			<div className="flex flex-col justify-between flex-1 mt-4 text-center">
-				<Title componentType="h3" className="text-lg sm:text-xl font-bold text-(--primary-color" text={name} />
+				<Title componentType="h3" className="text-lg sm:text-xl font-bold text-(--primary-color">
+					{name}
+				</Title>
 
 				<p className="text-(--accent-color) mt-1">
 					{model} - {year}
